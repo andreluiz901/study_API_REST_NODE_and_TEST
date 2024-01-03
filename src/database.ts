@@ -7,7 +7,7 @@ export const config: Knex.Config = {
   connection:
     env.DATABASE_CLIENT === "sqlite"
       ? {
-          filename: env.DATABASE_URL,
+          filename: env.DATABASE_CLIENT,
         }
       : env.DATABASE_URL,
   useNullAsDefault: true,
